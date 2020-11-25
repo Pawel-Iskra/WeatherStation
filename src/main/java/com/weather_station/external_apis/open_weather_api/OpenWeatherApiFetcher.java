@@ -8,12 +8,15 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class OpenWeatherApiFetcher {
 
-    @Value("${app.URL_OPENWEATHER}")
-    private String url;
+    @Value("${app.URL_OPENWEATHER1}")
+    private String url1;
+    @Value("${app.URL_OPENWEATHER2}")
+    private String url2;
+
 
     public WeatherFromOpenWeather getWeatherFromOpenWeather(String city) {
         return new RestTemplate().getForObject(
-                String.format(url, city), WeatherFromOpenWeather.class);
+                String.format(url1, city), WeatherFromOpenWeather.class);
     }
 
 }

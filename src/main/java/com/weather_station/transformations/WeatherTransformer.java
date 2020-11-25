@@ -2,6 +2,7 @@ package com.weather_station.transformations;
 
 import com.weather_station.dtos.WeatherDto;
 import com.weather_station.external_apis.open_weather_api.model.WeatherFromOpenWeather;
+import com.weather_station.models.Weather;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -10,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 @Component
 public class WeatherTransformer {
 
-    public WeatherDto fromOpenWeatherToWeatherDto(WeatherFromOpenWeather fromOpenWeather) {
+    public WeatherDto getWeatherDtoFromOpenWeather(WeatherFromOpenWeather fromOpenWeather) {
         WeatherDto weatherDto = new WeatherDto();
         weatherDto.setCityName(fromOpenWeather.getCityName());
         weatherDto.setCountry(fromOpenWeather.getSys().getCountry());
@@ -33,5 +34,20 @@ public class WeatherTransformer {
         weatherDto.setWindDegrees(fromOpenWeather.getWind().getDegrees());
 
         return weatherDto;
+    }
+
+    public Weather getWeatherEntityFromWeatherDto(WeatherDto weatherDto) {
+        Weather weather = new Weather();
+        weather.setDate(weatherDto.getDate());
+        weather.setHour(weatherDto.getHour());
+        weather.setMainWeatherType(weatherDto.getMainWeatherType());
+        weather.setWeatherDescription(weatherDto.getWeatherDescription());
+        weather.setTemperature(weatherDto.getTemperature());
+        weather.setTemperatureSensed(weatherDto.getTemperatureSensed());
+        weather.setPressure(weatherDto.getPressure());
+        weather.setHumidity(weatherDto.getHumidity());
+        weather.setWindSpeed(weatherDto.getWindSpeed());
+        weather.setWindDegrees(weatherDto.getWindDegrees());
+        return weather;
     }
 }
