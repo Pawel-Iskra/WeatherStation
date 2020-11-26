@@ -8,24 +8,99 @@
             background-image: url('backimage.jpg');
             background-size: 100%;
         }
+
+        table, td {
+            background-color: yellowgreen;
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 7px;
+            text-align: center;
+            font-size: 18px;
+        }
     </style>
 </head>
 
 
 <body>
 
-<h1 align="center">Weather station</h1>
+<h1 style="color:darkcyan; text-align: center">Weather station</h1>
 
-<form id="cityname" style="width:25%; margin: 0 auto">
-    <B>Type city name: </B>
-    <input type="text" name="city" placeholder="CITY NAME">
-    <br/>
-    <button id="btn1"><B>Check current weather</B></button>
-</form>
+<div id="input" style="text-align: center">
+    <p style="font-size:20px;"><B>Type city name:</B>
+        <input id="city" type="text" placeholder="CITY NAME" style="font-size: 15px"><br/></p>
+    <button id="btn1" style="font-size: 16px"><B>Check current weather</B></button>
+</div>
+<br>
+<div id="response" align="center"></div>
 
 
 <script>
+    const API_URL = 'http://localhost:8080';
 
+    document.getElementById('btn1').addEventListener('click', event => {
+        event.preventDefault();
+        const city = document.getElementById('city').value;
+        const inputObj = {
+            name: city
+        }
+        console.log(inputObj);
+        console.log(`${new URLSearchParams(inputObj)}`);
+
+        fetch(`${API_URL}/weather/city?${new URLSearchParams(inputObj)}`)
+            .then(json => json.json())
+            .then(resp => {
+                let response = `
+                    <table>
+                        <tr>
+                            <td><B>City</B></td>
+                            <td><B>${resp.cityName}, ${resp.country}<br>
+                                lon: ${resp.longitude}, lat: ${resp.latitude}</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Main weather type</B></td>
+                            <td><B>${resp.mainWeatherType}</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Weather description</B></td>
+                            <td><B>${resp.weatherDescription}</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Temperature</B></td>
+                            <td><B>${resp.temperature}°C</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Temperature sensed</B></td>
+                            <td><B>${resp.temperatureSensed}°C</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Pressure</B></td>
+                            <td><B>${resp.pressure}hPa</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Humidity</B></td>
+                            <td><B>${resp.humidity}%</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Wind speed</B></td>
+                            <td><B>${resp.windSpeed} m/s</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Wind degrees</B></td>
+                            <td><B>${resp.windDegrees}°</B></td>
+                        </tr>
+                        <tr>
+                            <td><B>Date & time</B></td>
+                            <td><B>${resp.date}<br>
+                                   ${resp.hour}</B></td>
+                        </tr>
+                    </table>
+               `;
+                document.getElementById('response').innerHTML = response;
+            });
+    });
 
 </script>
 
