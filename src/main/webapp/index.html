@@ -18,7 +18,7 @@
         td {
             padding: 7px;
             text-align: center;
-            font-size: 18px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -33,7 +33,7 @@
         <input id="city" type="text" placeholder="CITY NAME" style="font-size: 15px"><br/></p>
     <button id="btn1" style="font-size: 16px"><B>Check current weather</B></button>
 </div>
-<br>
+
 <div id="response" align="center"></div>
 
 
@@ -48,11 +48,20 @@
         }
         console.log(inputObj);
         console.log(`${new URLSearchParams(inputObj)}`);
-
         fetch(`${API_URL}/weather/city?${new URLSearchParams(inputObj)}`)
-            .then(json => json.json())
+            .then(response => {
+                let status = response.status;
+                if (status === 400) {
+                    let txt = `<p style="font-size:22px; color:red; background-color: lightyellow;
+                                         border: 3px solid #333; padding: 4px; width: 30%">
+                            <B>Given city name="${city}" was not found!</B></p>`;
+                    document.getElementById('response').innerHTML = txt;
+                }
+                return response.json();
+            })
             .then(resp => {
                 let response = `
+                    <br>
                     <table>
                         <tr>
                             <td><B>City</B></td>
@@ -99,8 +108,8 @@
                     </table>
                `;
                 document.getElementById('response').innerHTML = response;
-            });
-    });
+            }); // end then
+    }); // end eventListener
 
 </script>
 
