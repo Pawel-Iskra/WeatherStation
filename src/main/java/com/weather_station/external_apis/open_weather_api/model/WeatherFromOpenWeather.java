@@ -19,6 +19,29 @@ public class WeatherFromOpenWeather {
     @JsonProperty("name")
     private String cityName;
 
+    public void setCoordinates(Coordinates coordinates) {
+        this.coordinates = coordinates;
+    }
+
+    public void setWeathers(Weather[] weathers) {
+        this.weathers = weathers;
+    }
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
+
+    public void setWind(Wind wind) {
+        this.wind = wind;
+    }
+
+    public void setSys(Sys sys) {
+        this.sys = sys;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
+    }
 
     public Coordinates getCoordinates() {
         return coordinates;

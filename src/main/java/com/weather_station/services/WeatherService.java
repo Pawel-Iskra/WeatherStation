@@ -45,7 +45,7 @@ public class WeatherService {
     }
 
     private void saveLocationAndWeatherToDb(WeatherDto weatherDto) {
-        Location location;
+        Location location = new Location();
         String cityName = weatherDto.getCityName();
         Optional<Location> locationOptional = locationRepository.findByCityName(cityName);
         if (locationOptional.isEmpty()) {
