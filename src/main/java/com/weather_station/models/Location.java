@@ -16,6 +16,30 @@ public class Location {
     @OneToMany
     private List<Weather> weatherList;
 
+    public Long getId() {
+        return id;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public Float getLongitude() {
+        return longitude;
+    }
+
+    public Float getLatitude() {
+        return latitude;
+    }
+
+    public List<Weather> getWeatherList() {
+        return weatherList;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
