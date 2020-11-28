@@ -22,11 +22,11 @@ class WeatherControllerTest {
     @Autowired
     MockMvc mockMvc;
 
-    @Test
-    public void when_request_with_valid_cityName_then_status_OK_should_be_returned() throws Exception {
+//    @Test
+//    public void when_request_with_valid_cityName_then_status_OK_should_be_returned() throws Exception {
 //        mockMvc.perform(get("/weather/city?name=Warsaw")
 //                .contentType("application/json"))
 //                .andExpect(status().isOk());
-    }
+//    }
 
 }
