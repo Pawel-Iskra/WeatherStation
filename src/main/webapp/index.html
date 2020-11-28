@@ -30,16 +30,24 @@
 
 <div id="input" style="text-align: center">
     <p style="font-size:20px;"><B>Type city name:</B>
-        <input id="city" type="text" placeholder="CITY NAME" style="font-size: 15px"><br/></p>
+        <input id="city" type="text" placeholder="CITY NAME" style="font-size: 17px"><br/></p>
     <button id="btn1" style="font-size: 16px"><B>Check current weather</B></button>
 </div>
 
 <div id="response" align="center"></div>
-
+<br>
+<div style="text-align: center">
+    <button id="btn2" style="font-size: 16px"><B>Get all cities from db</B></button>
+    <br>
+    <select id="selectcity" style="font-size: 15px">
+        <option value="" disabled selected>SELECT CITY</option>
+    </select>
+</div>
 
 <script>
     const API_URL = 'http://localhost:8080';
 
+    //getCurrentWeatherForCity
     document.getElementById('btn1').addEventListener('click', event => {
         event.preventDefault();
         const city = document.getElementById('city').value;
@@ -110,6 +118,24 @@
                 document.getElementById('response').innerHTML = response;
             }); // end then
     }); // end eventListener
+    // end getCurrentWeatherForCity
+
+
+    // getAllCitiesFromDb
+    document.getElementById('btn2').addEventListener('click', event => {
+        event.preventDefault();
+
+        fetch(`${API_URL}/location/getall`)
+            .then(response => response.json())
+            .then(resp => {
+                let i, select = '';
+                for (i in resp) {
+                    select += `<option>${resp[i].country} - ${resp[i].cityName}</option>`
+                }
+                document.getElementById('selectcity').innerHTML = select;
+            });
+    });
+    // end getAllCitiesFromDb
 
 </script>
 
