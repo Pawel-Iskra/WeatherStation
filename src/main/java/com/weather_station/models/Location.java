@@ -16,6 +16,16 @@ public class Location {
     @OneToMany
     private List<Weather> weatherList;
 
+    // for tests purpose
+    public Location() {
+    }
+
+    // for tests purpose
+    public Location(String cityName, String country) {
+        this.cityName = cityName;
+        this.country = country;
+    }
+
     public Long getId() {
         return id;
     }
