@@ -70,4 +70,52 @@ public class Weather {
     public void setLocation(Location location) {
         this.location = location;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getHour() {
+        return hour;
+    }
+
+    public String getMainWeatherType() {
+        return mainWeatherType;
+    }
+
+    public String getWeatherDescription() {
+        return weatherDescription;
+    }
+
+    public Float getTemperature() {
+        return temperature;
+    }
+
+    public Float getTemperatureSensed() {
+        return temperatureSensed;
+    }
+
+    public Integer getPressure() {
+        return pressure;
+    }
+
+    public Integer getHumidity() {
+        return humidity;
+    }
+
+    public Float getWindSpeed() {
+        return windSpeed;
+    }
+
+    public Integer getWindDegrees() {
+        return windDegrees;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
 }

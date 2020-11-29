@@ -1,6 +1,7 @@
 package com.weather_station.services;
 
 import com.weather_station.dtos.WeatherDto;
+import com.weather_station.dtos.WeatherHistoryDto;
 import com.weather_station.external_apis.open_weather_api.OpenWeatherApiFetcher;
 import com.weather_station.external_apis.open_weather_api.model.WeatherFromOpenWeather;
 import com.weather_station.models.Location;
@@ -11,6 +12,8 @@ import com.weather_station.transformations.WeatherTransformer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -42,6 +45,21 @@ public class WeatherService {
         saveLocationAndWeatherToDb(weatherDto);
 
         return weatherDto;
+    }
+
+    public List<WeatherHistoryDto> getWeatherHistoryForCity(String cityName) {
+        List<WeatherHistoryDto> listForReturn = new ArrayList<>();
+        Location location;
+        Optional<Location> locationOptional = locationRepository.findByCityName(cityName);
+        if (locationOptional.isEmpty()) {
+            throw new IllegalArgumentException(String.format("given city name=%s is invalid", cityName));
+        }
+        location = locationOptional.get();
+        List<Weather> weatherList = weatherRepository.findAllByLocationOrderByDateDesc(location);
+        for (Weather weather : weatherList) {
+            listForReturn.add(weatherTransformer.getWeatherHistoryDtoFromWeatherEntity(weather));
+        }
+        return listForReturn;
     }
 
     private void saveLocationAndWeatherToDb(WeatherDto weatherDto) {

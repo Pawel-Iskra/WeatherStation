@@ -1,6 +1,7 @@
 package com.weather_station.transformations;
 
 import com.weather_station.dtos.WeatherDto;
+import com.weather_station.dtos.WeatherHistoryDto;
 import com.weather_station.external_apis.open_weather_api.model.WeatherFromOpenWeather;
 import com.weather_station.models.Weather;
 import org.springframework.stereotype.Component;
@@ -49,5 +50,20 @@ public class WeatherTransformer {
         weather.setWindSpeed(weatherDto.getWindSpeed());
         weather.setWindDegrees(weatherDto.getWindDegrees());
         return weather;
+    }
+
+    public WeatherHistoryDto getWeatherHistoryDtoFromWeatherEntity(Weather weather) {
+        WeatherHistoryDto weatherHistoryDto = new WeatherHistoryDto();
+        weatherHistoryDto.setDate(weather.getDate());
+        weatherHistoryDto.setHour(weather.getHour());
+        weatherHistoryDto.setMainWeatherType(weather.getMainWeatherType());
+        weatherHistoryDto.setWeatherDescription(weather.getWeatherDescription());
+        weatherHistoryDto.setTemperature(weather.getTemperature());
+        weatherHistoryDto.setTemperatureSensed(weather.getTemperatureSensed());
+        weatherHistoryDto.setPressure(weather.getPressure());
+        weatherHistoryDto.setHumidity(weather.getHumidity());
+        weatherHistoryDto.setWindSpeed(weather.getWindSpeed());
+        weatherHistoryDto.setWindDegrees(weather.getWindDegrees());
+        return weatherHistoryDto;
     }
 }
