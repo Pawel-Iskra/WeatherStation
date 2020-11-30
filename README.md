@@ -4,7 +4,7 @@ After receiving weather request with given name, app communicates with external 
 App gives posibility to view the weather history from database.
   
 <table>
-  <tr>
+  <tr align="center">
     <td>Java&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width="25" height="25"></a></td>
     <td>SpringBoot&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
@@ -16,8 +16,8 @@ App gives posibility to view the weather history from database.
     </td>
   </tr>
   
-  <tr>
-    <td>&nbsp&nbsp&nbsp&nbsp&nbsp3-Tier<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+  <tr align="center">
+    <td>3-Tier<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>DTO pattern&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
@@ -27,6 +27,8 @@ App gives posibility to view the weather history from database.
         width="25" height="25"></a>
     </td>
   </tr>
+  
+  <tr align="center">
     <td>GIT&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
@@ -37,11 +39,10 @@ App gives posibility to view the weather history from database.
         width=25" height="25"></a>
         <br>Scheduled configuration&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
-  <tr>
-    
+    </td>
   </tr>
   
-  <tr>
+  <tr align="center">
     <td>HTML&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
