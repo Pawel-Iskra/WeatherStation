@@ -1,7 +1,8 @@
 # WeatherStation
 <B>Mechanism description:<br>
-After receiving weather request with given name, app communicates with external weather station API. App collects data, add them to database then send response via DTO to frontend.
-App gives posibility to view the weather history from database.
+After receiving weather request with given city name, app communicates with external weather station API.<br>
+App receives data, add them to database then send response via DTO to frontend.<br>
+App enables to see the weather history for specific city from database.
   
 <table>
   <tr align="center">
@@ -17,7 +18,7 @@ App gives posibility to view the weather history from database.
   </tr>
   
   <tr align="center">
-    <td>3-Tier&nbsp&nbsp&nbsp<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>3-Tier&nbsp&nbsp&nbsp&nbsp<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>DTO pattern&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
