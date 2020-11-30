@@ -17,7 +17,7 @@ App gives posibility to view the weather history from database.
   </tr>
   
   <tr align="center">
-    <td>3-Tier<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>3-Tier&nbsp&nbsp&nbsp<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>DTO pattern&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
@@ -29,17 +29,27 @@ App gives posibility to view the weather history from database.
   </tr>
   
   <tr align="center">
+    <td>Unit tests&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+        width=25" height="25"></a>
+    </td>
     <td>GIT&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>External API&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
-    <td>Exception handler&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
-        width=25" height="25"></a>
-        <br>Scheduled configuration&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+  </tr>
+  
+  <tr align="center">
+    <td>Exception&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>handler&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
+    <td>Scheduled&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>configuration&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+        width=25" height="25"></a>
+    </td> 
+    <td>Swagger&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
+        width=25" height="25"></a>
+    </td>  
   </tr>
   
   <tr align="center">
