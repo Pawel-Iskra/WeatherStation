@@ -73,5 +73,21 @@ class WeatherServiceTest {
         Mockito.verify(openWeatherApiFetcher).getWeatherFromOpenWeather(cityName);
     }
 
+    @Test
+    public void when_given_cityName_is_blank_then_method_getWeatherHistoryForCity_should_throw_IllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class,
+                () -> weatherService.getWeatherHistoryForCity("   "));
+    }
+
+    @Test
+    public void when_given_cityName_is_correct_then_method_getWeatherHistoryForCity_should_call_findByCityName_from_locationRepository() {
+        String cityName = "validCityName";
+        try {
+            weatherService.getWeatherHistoryForCity(cityName);
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+        Mockito.verify(locationRepository).findByCityName(cityName);
+    }
 
 }

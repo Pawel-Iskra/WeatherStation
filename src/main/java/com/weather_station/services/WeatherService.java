@@ -59,7 +59,7 @@ public class WeatherService {
             throw new IllegalArgumentException(String.format("given city name=%s was not found in db", cityName));
         }
         location = locationOptional.get();
-        List<Weather> weatherList = weatherRepository.findAllByLocationOrderByDateDesc(location);
+        List<Weather> weatherList = weatherRepository.findAllByLocationOrderByDateDescHourDesc(location);
         for (Weather weather : weatherList) {
             listForReturn.add(weatherTransformer.getWeatherHistoryDtoFromWeatherEntity(weather));
         }

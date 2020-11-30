@@ -23,6 +23,17 @@ public class Weather {
     @ManyToOne
     private Location location;
 
+    // for tests purpose
+    public Weather() {
+    }
+
+    // for tests purpose
+    public Weather(String date, String hour, Location location) {
+        this.date = date;
+        this.hour = hour;
+        this.location = location;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
