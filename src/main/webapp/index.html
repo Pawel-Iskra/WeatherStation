@@ -29,20 +29,35 @@
 <h1 style="color:darkcyan; text-align: center">Weather station</h1>
 
 <div id="input" style="text-align: center">
-    <p style="font-size:20px;"><B>Type city name:</B>
+    <p style="font-size:21px;"><B>TYPE CITY NAME:</B>
         <input id="city" type="text" placeholder="CITY NAME" style="font-size: 17px"><br/></p>
     <button id="btn1" style="font-size: 16px"><B>Check current weather</B></button>
 </div>
 
 <div id="response" align="center"></div>
 <br>
+
+<hr style="width: 60%; height: 5px; color: #333; background-color: #333">
+
+<div align="center">
+    <h2 style="text-align: center; background-color: lightyellow;
+    border: 3px solid #333; padding: 1px; width: 25%">Weather history from database</h2></div>
 <div style="text-align: center">
     <button id="btn2" style="font-size: 16px"><B>Get all cities from db</B></button>
-    <br>
+    <br><br>
     <select id="selectcity" style="font-size: 15px">
         <option value="" disabled selected>SELECT CITY</option>
     </select>
 </div>
+
+<br>
+<div id="buttonforhistory" style="text-align: center">
+    <button id="btn3" style="font-size: 16px"><B>Get weather history
+        <br> for chosen city from db</B></button>
+</div>
+
+<br>
+<div id="weatherhistory" align="center"></div>
 
 <script>
     const API_URL = 'http://localhost:8080';
@@ -136,6 +151,73 @@
             });
     });
     // end getAllCitiesFromDb
+
+    // getWeatherHistoryForCity
+    document.getElementById('btn3').addEventListener('click', event => {
+        event.preventDefault();
+
+        const fromSelect = document.getElementById('selectcity').value;
+        if (fromSelect.length < 2) {
+            document.getElementById('weatherhistory').innerHTML = `
+                                        <p style="font-size:18px; color:red; background-color: lightyellow;
+                                         border: 3px solid #333; padding: 4px; width: 30%">
+                                        <B>Given city name="${fromSelect}" was not found!
+                                        <br>Click the button "Get all cities from db"</B></p>`;
+
+            return;
+        }
+        const cityName = fromSelect.substring(5, fromSelect.length);
+
+
+        fetch(`${API_URL}/weather/history/${cityName}`)
+            .then(response => response.json())
+            .then(resp => {
+                let i, txt = `<h2>Weather history from database for ${cityName}</h2>`;
+                for (i in resp) {
+                    txt += `<br>
+                            <table>
+                                <tr>
+                                    <td><B>Date & time</B></td>
+                                    <td><B>${resp[i].date}<br>
+                                           ${resp[i].hour}</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Main weather type</B></td>
+                                    <td><B>${resp[i].mainWeatherType}</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Weather description</B></td>
+                                    <td><B>${resp[i].weatherDescription}</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Temperature</B></td>
+                                    <td><B>${resp[i].temperature}°C</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Temperature sensed</B></td>
+                                    <td><B>${resp[i].temperatureSensed}°C</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Pressure</B></td>
+                                    <td><B>${resp[i].pressure}hPa</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Humidity</B></td>
+                                    <td><B>${resp[i].humidity}%</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Wind speed</B></td>
+                                    <td><B>${resp[i].windSpeed} m/s</B></td>
+                                </tr>
+                                <tr>
+                                    <td><B>Wind degrees</B></td>
+                                    <td><B>${resp[i].windDegrees}°</B></td>
+                                </tr>
+                            </table> `
+                }
+                document.getElementById('weatherhistory').innerHTML = txt;
+            });
+    });
 
 </script>
 

@@ -48,11 +48,15 @@ public class WeatherService {
     }
 
     public List<WeatherHistoryDto> getWeatherHistoryForCity(String cityName) {
+        System.out.println("cityName = " + cityName);
+        if (cityName == null || cityName.isBlank()) {
+            throw new IllegalArgumentException(String.format("given city name=%s is invalid", cityName));
+        }
         List<WeatherHistoryDto> listForReturn = new ArrayList<>();
         Location location;
         Optional<Location> locationOptional = locationRepository.findByCityName(cityName);
         if (locationOptional.isEmpty()) {
-            throw new IllegalArgumentException(String.format("given city name=%s is invalid", cityName));
+            throw new IllegalArgumentException(String.format("given city name=%s was not found in db", cityName));
         }
         location = locationOptional.get();
         List<Weather> weatherList = weatherRepository.findAllByLocationOrderByDateDesc(location);
