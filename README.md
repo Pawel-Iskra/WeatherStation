@@ -4,7 +4,7 @@ After receiving weather request with given city name, app communicates with exte
 App receives data, add them to database then send response via DTO to frontend.<br>
 App enables to see the weather history for specific city from database.
   
-<table>
+<table align="center">
   <tr align="center">
     <td>Java&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width="25" height="25"></a></td>
