@@ -6,7 +6,7 @@ App enables to see the weather history for specific city from database.
   
 <table>
   <tr align="center">
-    <td>Java&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>Java&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width="25" height="25"></a></td>
     <td>SpringBoot&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a></td>
@@ -24,7 +24,7 @@ App enables to see the weather history for specific city from database.
     <td>DTO pattern&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
-    <td>MySQL&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>MySQL&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width="25" height="25"></a>
     </td>
   </tr>
@@ -33,7 +33,7 @@ App enables to see the weather history for specific city from database.
     <td>Unit tests&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
-    <td>GIT&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>GIT&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>External API&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
@@ -42,25 +42,25 @@ App enables to see the weather history for specific city from database.
   </tr>
   
   <tr align="center">
-    <td>Exception&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>handler&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>Clean code&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
-    <td>Scheduled&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>configuration&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>Exception&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>handler&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td> 
-    <td>Swagger&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
+    <td>Scheduled&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<br>configuration&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>  
   </tr>
   
   <tr align="center">
-    <td>HTML&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>HTML&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>JavaScript&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td> 
-    <td>CSS&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
+    <td>CSS&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done%20not.png"
         width=25" height="25"></a>
     </td>  
   </tr>
