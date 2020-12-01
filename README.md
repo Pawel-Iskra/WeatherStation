@@ -18,14 +18,14 @@ App enables to see the weather history for specific city from database.
   </tr>
   
   <tr align="center">
+    <td>REST API&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+        width=25" height="25"></a>
+    </td>
     <td>3-Tier&nbsp&nbsp&nbsp&nbsp<br>Architecture&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
     <td>DTO pattern&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
-    </td>
-    <td>MySQL&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
-        width="25" height="25"></a>
     </td>
   </tr>
   
@@ -36,7 +36,7 @@ App enables to see the weather history for specific city from database.
     <td>GIT&nbsp&nbsp&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
-    <td>External API&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
+    <td>MySQL&nbsp&nbsp<img alt="Done" src="https://github.com/Pawel-Iskra/Media/blob/master/Done.png"
         width=25" height="25"></a>
     </td>
   </tr>
